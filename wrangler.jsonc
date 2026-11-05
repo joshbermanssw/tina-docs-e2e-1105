@@ -3,7 +3,7 @@
 // assets.directory.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tina-docs",
+  "name": "tina-docs-e2e-1105",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],

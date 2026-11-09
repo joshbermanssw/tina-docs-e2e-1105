@@ -6,7 +6,7 @@
     "predev": "node scripts/check-pagefind.js",
     "dev": "tinacms dev -c \"next dev --turbopack\"",
     "prebuild": "node scripts/check-build-env.js",
-    "build": "echo 'Starting TinaCMS build...' && tinacms build && echo 'TinaCMS build completed. Starting Next.js build...' && next build",
+    "build": "echo 'Starting TinaCMS build...' && tinacms build --local --skip-cloud-checks && echo 'TinaCMS build completed. Starting Next.js build...' && next build",
     "build-local": "tinacms build --content=local --skip-cloud-checks -c \"next build\" && npx pagefind --site .next --glob \"server/**/*.html\" --output-path .next/static/pagefind && next-sitemap",
     "postbuild": "npx pagefind --site .next --glob \"server/**/*.html\" --output-path .next/static/pagefind && next-sitemap",
     "deploy": "opennextjs-cloudflare build --skipNextBuild && opennextjs-cloudflare deploy",
